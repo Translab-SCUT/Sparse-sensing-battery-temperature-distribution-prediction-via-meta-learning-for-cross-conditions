@@ -1,18 +1,18 @@
-After the manuscript **“Sparse-sensing battery pack temperature distribution prediction via meta-learning for unseen conditions”** is accepted, the complete dataset and source code will be organized and released publicly in this repository. All files in this repository will be written in English.
+After the manuscript **“Sparse-sensing battery pack temperature distribution prediction via meta-learning for cross conditions”** is accepted, the complete dataset and source code will be organized and released publicly in this repository. All files in this repository will be written in English.
 
-# Sparse-Sensing Battery Pack Temperature Distribution Prediction via Meta-Learning for Unseen Conditions
+# Sparse-Sensing Battery Pack Temperature Distribution Prediction via Meta-Learning for Cross Conditions
 
 ## Overview
 
 This repository accompanies a research project on reconstructing and predicting the spatial temperature distribution of a battery pack from a very small number of temperature sensors. The central objective is to maintain accurate full-field temperature awareness when the battery operates under conditions that were not observed during model training.
 
-The project combines sparse sensing, low-dimensional temperature-field representation, cross-condition knowledge transfer, and temporal prediction. Instead of treating every operating condition as an isolated task, the proposed framework learns transferable structure from multiple source conditions and adapts that knowledge to an unseen target condition with limited support information.
+The project combines sparse sensing, low-dimensional temperature-field representation, cross-condition knowledge transfer, and temporal prediction. Instead of treating every operating condition as an isolated task, the proposed framework learns transferable structure from multiple source conditions and adapts that knowledge to a cross-condition target setting with limited support information.
 
 ## Research Motivation
 
 Reliable battery thermal management requires more than measurements at a few isolated locations. Localized hot spots and nonuniform temperature evolution may remain unobserved when sensor coverage is sparse. Increasing the number of physical sensors can improve observability, but it also increases cost, wiring complexity, packaging difficulty, and potential failure points.
 
-This work therefore investigates a deployment-oriented alternative: infer the full battery-pack temperature field from a small, fixed set of sensors while retaining generalization across diverse and previously unseen operating conditions.
+This work therefore investigates a deployment-oriented alternative: infer the full battery-pack temperature field from a small, fixed set of sensors while retaining generalization across diverse and cross-condition operating settings.
 
 ## Methodological Interpretation
 
@@ -24,8 +24,8 @@ The current research framework can be understood through five connected ideas:
 2. **Geometry-aware cross-condition alignment**  
    The modal subspaces are treated as points on a Grassmann manifold. Logarithmic and exponential mappings provide a principled way to describe and transfer changes in temperature-field structure between operating conditions.
 
-3. **Meta-learning for unseen conditions**  
-   Knowledge learned from multiple source conditions is organized as a transferable prior. For a previously unseen target condition, the model uses limited support information to adapt the representation and prediction components without requiring full retraining from scratch.
+3. **Meta-learning for cross conditions**  
+   Knowledge learned from multiple source conditions is organized as a transferable prior. For a a cross-condition target setting, the model uses limited support information to adapt the representation and prediction components without requiring full retraining from scratch.
 
 4. **Deployable sparse-sensor reconstruction**  
    A fixed sparse-sensor layout is optimized across conditions rather than separately for each target condition. Sparse observations are then used to recover low-dimensional coefficients and reconstruct the complete temperature distribution.
